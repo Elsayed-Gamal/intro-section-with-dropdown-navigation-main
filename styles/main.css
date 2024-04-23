@@ -115,7 +115,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  height: calc(100vh - 80px);
+  height: 700px;
 }
 
 .info {
@@ -169,15 +169,12 @@ main {
 .hero-img img {
   height: 70%;
   max-height: 1000px;
+  min-height: 600px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
 }
 
 .attribution a {
