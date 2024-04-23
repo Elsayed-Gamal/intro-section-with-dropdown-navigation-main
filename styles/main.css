@@ -42,6 +42,11 @@ body {
   list-style: none;
   margin-top: 2px;
 }
+
+.nav-link {
+  position: relative;
+}
+
 .nav-link a {
   text-decoration: none;
   color: var(--grey);
@@ -52,6 +57,35 @@ body {
 
 .nav-link a:hover {
   color: var(--black);
+}
+
+.dropdown-menu {
+  background-color: white;
+  border-radius: 11px;
+  padding: 30px 0;
+  width: 120px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu.first {
+  right: 0;
+  width: 150px;
+}
+
+.dropdown-menu.first img {
+  margin-right: 14px;
+}
+
+.dropdown-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .btns {
