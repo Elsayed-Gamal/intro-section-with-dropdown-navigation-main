@@ -1,19 +1,19 @@
 const dropdown1 = `
 <div class="dropdown-menu first">
   <ul class="dropdown-list">
-    <li class="link"><img src="images/icon-todo.svg" />Todo List</li>
-    <li class="link"><img src="images/icon-calendar.svg" />Calendar</li>
-    <li class="link"><img src="images/icon-reminders.svg" />Reminders</li>
-    <li class="link"><img src="images/icon-planning.svg" />Planning</li>
+    <li class="link link1"><img src="images/icon-todo.svg" />Todo List</li>
+    <li class="link link2"><img src="images/icon-calendar.svg" />Calendar</li>
+    <li class="link link3"><img src="images/icon-reminders.svg" />Reminders</li>
+    <li class="link link4"><img src="images/icon-planning.svg" />Planning</li>
   </ul>
 </div>
 `;
 const dropdown2 = `
 <div class="dropdown-menu second">
   <ul class="dropdown-list">
-    <li class="link">History</li>
-    <li class="link">Our Team</li>
-    <li class="link">Blog</li>
+    <li class="link link1">History</li>
+    <li class="link link2">Our Team</li>
+    <li class="link link3">Blog</li>
   </ul>
 </div>
 `;
@@ -31,7 +31,10 @@ const showHidedropdown = function (e) {
   if (
     dropdown1El &&
     e.target !== dropdown1El &&
-    e.target !== document.querySelector('.link')
+    e.target !== document.querySelector('.link1') &&
+    e.target !== document.querySelector('.link2') &&
+    e.target !== document.querySelector('.link3') &&
+    e.target !== document.querySelector('.link4')
   ) {
     dropdown1El.remove();
     document.querySelector('.drop1 img').src = 'images/icon-arrow-down.svg';
@@ -41,7 +44,9 @@ const showHidedropdown = function (e) {
   if (
     dropdown2El &&
     e.target !== dropdown2El &&
-    e.target !== document.querySelector('.link')
+    e.target !== document.querySelector('.link1') &&
+    e.target !== document.querySelector('.link2') &&
+    e.target !== document.querySelector('.link3')
   ) {
     dropdown2El.remove();
     document.querySelector('.drop2 img').src = 'images/icon-arrow-down.svg';
