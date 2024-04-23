@@ -31,6 +31,7 @@ const showHidedropdown = function (e) {
   if (
     dropdown1El &&
     e.target !== dropdown1El &&
+    e.target !== document.querySelector('.dropdown-list') &&
     e.target !== document.querySelector('.link1') &&
     e.target !== document.querySelector('.link2') &&
     e.target !== document.querySelector('.link3') &&
@@ -44,6 +45,7 @@ const showHidedropdown = function (e) {
   if (
     dropdown2El &&
     e.target !== dropdown2El &&
+    e.target !== document.querySelector('.dropdown-list') &&
     e.target !== document.querySelector('.link1') &&
     e.target !== document.querySelector('.link2') &&
     e.target !== document.querySelector('.link3')
