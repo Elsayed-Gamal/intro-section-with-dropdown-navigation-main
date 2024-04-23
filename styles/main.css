@@ -143,6 +143,7 @@ main {
 .info .btn {
   background-color: var(--black);
   color: var(--white);
+  border-color: var(--black);
   margin-bottom: 120px;
 }
 
