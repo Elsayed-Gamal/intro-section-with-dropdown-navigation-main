@@ -20,13 +20,14 @@ const dropdown2 = `
 
 const introNav = document.querySelector('.intro-nav');
 
-// Handle dropdown menus
+// Handle dropdown menus function
 
 const showHidedropdown = function (e) {
   const link = e.target.closest('a');
   const dropdown1El = document.querySelector('.dropdown-menu.first');
   const dropdown2El = document.querySelector('.dropdown-menu.second');
 
+  // Hide dropdown menu 1 if exist
   if (
     dropdown1El &&
     e.target !== dropdown1El &&
@@ -35,6 +36,8 @@ const showHidedropdown = function (e) {
     dropdown1El.remove();
     document.querySelector('.drop1 img').src = 'images/icon-arrow-down.svg';
   }
+
+  // Hide dropdown menu 2 if exist
   if (
     dropdown2El &&
     e.target !== dropdown2El &&
@@ -44,7 +47,10 @@ const showHidedropdown = function (e) {
     document.querySelector('.drop2 img').src = 'images/icon-arrow-down.svg';
   }
 
+  // Finish the function if the clicked element not a navigation link
   if (!link) return;
+
+  // Show dropdown menu 1 and 2
   if (link.parentElement.classList.contains('drop1')) {
     if (!dropdown1El) {
       link.parentElement.insertAdjacentHTML('beforeend', dropdown1);
@@ -59,4 +65,5 @@ const showHidedropdown = function (e) {
   }
 };
 
+// Add click event to the whole page
 document.addEventListener('click', showHidedropdown);
