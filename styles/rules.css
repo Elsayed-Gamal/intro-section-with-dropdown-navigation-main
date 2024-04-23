@@ -3,4 +3,6 @@
   border-style: solid;
   border-radius: 11px;
   padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
 }
