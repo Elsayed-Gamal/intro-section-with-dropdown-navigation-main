@@ -52,6 +52,10 @@ body {
   gap: 5px;
 }
 
+.nav-link a:hover {
+  color: var(--black);
+}
+
 .btns {
   justify-items: flex-end;
 }
@@ -62,8 +66,16 @@ body {
   font-weight: 700;
 }
 
+.btns .btn:hover {
+  color: var(--black);
+}
+
 .btns .cta-btn {
   border-color: var(--grey);
+}
+
+.btns .cta-btn:hover {
+  border-color: var(--black);
 }
 
 main {
@@ -100,6 +112,11 @@ main {
   background-color: var(--black);
   color: var(--white);
   margin-bottom: 120px;
+}
+
+.info .btn:hover {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .info .clients {
