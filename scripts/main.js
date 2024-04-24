@@ -19,6 +19,10 @@ const dropdown2 = `
 `;
 
 const introNav = document.querySelector('.intro-nav');
+const hamburgerBtn = document.querySelector('.hamburger');
+const sideMenu = document.querySelector('.side-menu');
+const overlay = document.querySelector('.overlay');
+const navContaner = document.querySelector('.flex-container');
 
 // Handle dropdown menus function
 
@@ -69,5 +73,29 @@ const showHidedropdown = function (e) {
   }
 };
 
+// Handle shide menu
+
+const showSideMenu = function () {
+  hamburgerBtn.classList.toggle('fixed');
+  if (
+    hamburgerBtn.querySelector('img').getAttribute('src') ===
+    'images/icon-menu.svg'
+  ) {
+    hamburgerBtn.querySelector('img').src = 'images/icon-close-menu.svg';
+  } else {
+    hamburgerBtn.querySelector('img').src = 'images/icon-menu.svg';
+  }
+
+  sideMenu.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
+  navContaner.classList.toggle('hidden-750px');
+};
+
 // Add click event to the whole page
 document.addEventListener('click', showHidedropdown);
+
+// // Add click event to handle side menu
+hamburgerBtn.addEventListener('click', showSideMenu);
+
+// Close side menu when click on overlay
+overlay.addEventListener('click', showSideMenu);

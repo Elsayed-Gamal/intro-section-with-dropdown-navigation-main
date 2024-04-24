@@ -20,12 +20,13 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
+    <div class="overlay hidden"></div>
     <section class="intro">
       <nav class="intro-nav">
-        <div class="flex-container">
-          <div class="logo">
-            <img src="images/logo.svg" alt="logo" />
-          </div>
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+        <div class="flex-container hidden-750px">
           <ul class="nav-links">
             <li class="nav-link drop1">
               <a href="#">Features <img src="images/icon-arrow-down.svg" /></a>
@@ -36,16 +37,19 @@
             <li class="nav-link"><a href="#">Careers</a></li>
             <li class="nav-link"><a href="#">About</a></li>
           </ul>
+
+          <div class="btns">
+            <button class="btn">Login</button>
+            <button class="btn cta-btn">Register</button>
+          </div>
         </div>
-        <div class="btns">
-          <button class="btn">Login</button>
-          <button class="btn cta-btn">Register</button>
-        </div>
+        <div class="hamburger"><img src="images/icon-menu.svg" /></div>
+        <div class="side-menu hidden"></div>
       </nav>
 
       <main>
         <div class="info">
-          <h1>Make<br />remote work</h1>
+          <h1>Make <span>remote work</span></h1>
           <p>
             Get your team in sync, no matter your location. Streamline
             processes, create team rituals, and watch productivity soar.
