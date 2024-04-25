@@ -325,6 +325,8 @@ main {
 
   .info h1 {
     font-size: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .info .clients {
@@ -335,6 +337,9 @@ main {
 @media (max-width: 375px) {
   .info .clients {
     flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
   }
 
   .info .btn {
