@@ -317,6 +317,7 @@ main {
     height: 200px;
     max-width: unset;
     max-height: unset;
+    object-fit: contain;
   }
   .info {
     width: 100%;
